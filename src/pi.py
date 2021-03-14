@@ -1,29 +1,38 @@
 from manimlib import *
 import os
 import sys
+import datetime
+
 sys.path.append(".")
+from pi_creature_animations import Blink
 from pi_creature import Mortimer
 from pi_creature import Randolph
 
 class PiDay(Scene):
     def construct(self):
-        # Pi creature quote
-        morty = Mortimer(color=GREY_BROWN)
-        morty.set_height(1)
+
+        randy = Randolph()
+        self.play(FadeIn(randy))
+
         bubble = SpeechBubble(
             direction=RIGHT,
-            height=2.5,
-            width=5,
+            height=2,
+            width=3,
         )
-        bubble.next_to(morty, UL, buff=0)
-        bubble.write("Happy birthday to myself!!")
-
-        self.add(morty)
+        now = datetime.datetime.now()
+        bubble.next_to(randy, UL, buff=0)
+        bubble.write(r"Happy $\pi$ day " + str(now.year) + "   ")
         self.add(bubble)
         self.add(bubble.content)
+        # self.add(randy)
+
+        # self.play(randy.change, "pondering")
+        for x in range(10):
+            self.play(Blink(randy))
+            self.wait(2)
 
 
-
+        """
         grid = Tex(r"\pi").get_grid(20, 20, height=10)
         self.add(grid)
 
@@ -55,4 +64,5 @@ class PiDay(Scene):
             ),
             run_time=5,
         )
+        """
         self.wait()
