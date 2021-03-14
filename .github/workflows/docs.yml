@@ -10,6 +10,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  download:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/download-artifact@v2
+      with:
+        name: my-artifact
+
+    - name: Display structure of downloaded files
+      run: ls -R
+
   deploy:
     runs-on: ubuntu-18.04
     steps:

@@ -1,4 +1,6 @@
+import os
 from manimlib import *
+os.environ['DISPLAY'] = 'localhost:0.0'
 
 class AnimatingMethods(Scene):
     def construct(self):
