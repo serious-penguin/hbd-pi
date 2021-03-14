@@ -71,8 +71,8 @@ class PiCreature(SVGMobject):
             self.to_corner(self.start_corner)
 
         # Shouldn't need this, remove?
-        self.mouth.insert_n_curves(10)
-        self.mouth.set_stroke(BLACK, 1)
+        # self.mouth.insert_n_curves(10)
+        # self.mouth.set_stroke(BLACK, 1)
 
     def align_data_and_family(self, mobject):
         # This ensures that after a transform into a different mode,
