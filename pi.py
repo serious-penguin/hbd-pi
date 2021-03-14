@@ -1,6 +1,4 @@
-import os
 from manimlib import *
-os.environ['DISPLAY'] = 'localhost:0.0'
 
 class AnimatingMethods(Scene):
     def construct(self):
@@ -47,4 +45,3 @@ class AnimatingMethods(Scene):
             ),
             run_time=5,
         )
-        self.wait()
