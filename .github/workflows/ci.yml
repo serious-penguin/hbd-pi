@@ -1,28 +1,30 @@
-on:
-  pull_request:
-  push:
-    branches: master
+name: Build
 
-name: Continuous Integration
+on:
+  push:
+    branches:
+      - master
 
 jobs:
+  build:
+    runs-on: ubuntu-18.04
 
-  all:
-    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master # Checking out the repo
+    - uses: actions/checkout@v2
 
-    - name: run checks
-      uses: VaultVulp/action-pipenv@v2.0.1
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        command: check
+        python-version: '3.8'
 
     - name: Install dependencies
-      uses: VaultVulp/action-pipenv@v2.0.1
-      with:
-        command: install -d # Install all dependencies, including development ones
+      run: |
+        sudo apt install ffmpeg
+        sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+        pip3 install --upgrade pip
+        pip3 install manimgl
 
-    - name: Run program
-      uses: VaultVulp/action-pipenv@v2.0.1
-      with:
-        command: run render # Run custom `test` command defined in the `[scripts]` block of Pipfile
+    - name: Render
+      run: |
+        manimgl pi.py DefaultScene -i
+        ls
