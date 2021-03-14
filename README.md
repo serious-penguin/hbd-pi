@@ -7,8 +7,15 @@ See pages deployment [here](https://sebastienblanchet.github.io/hbd-pi/)
 ### Build
 
 ```bash
+# Install requirements
 pip3 install manimgl
+
+# Go to source
 cd src/
-manimgl pi.py -w -c BLACK
-# cp -f video/PiDay.mp4 ../docs/
+
+# Build output video ~/docs/videos/PiDay.mp4
+manimgl pi.py -w
+
+# Run interfactively
+manimgl pi.py -i
 ```
