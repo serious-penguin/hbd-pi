@@ -1,0 +1,11 @@
+<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <ellipse ry="50" rx="50" id="svg_3" cy="90" cx="239" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="null" fill="black"/>
+  <ellipse ry="50" rx="50" id="svg_6" cy="88" cx="414" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="null" fill="black"/>
+  <ellipse ry="16" rx="17" id="svg_2" cy="89" cx="236.5" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="null" fill="black"/>
+  <ellipse ry="16" rx="17" id="svg_5" cy="86" cx="415.5" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="null" fill="black"/>
+  <path id="svg_1" fill="black" d="m11.49969,318.0384l20.67524,1.5315c21.44099,-24.24874 29.86424,-95.97398 156.21296,-81.93523c-4.5945,307.32093 -139.36646,339.73767 -130.94322,402.7844c3.063,35.73499 31.39575,57.68649 62.02574,58.96274c96.73973,-3.31825 92.40048,-133.75097 122.51997,-462.51289l124.81722,0c-6.6365,115.88347 -24.75924,231.76694 -26.80124,345.35316c1.5315,75.55398 47.47649,115.88348 107.97072,116.39398c99.54748,3.31825 130.94322,-112.82048 130.94322,-162.33897l-21.44099,0.00001c-2.042,40.83999 -21.69625,70.19373 -63.55724,71.98048c-114.09672,1.5315 -51.30524,-200.62645 -50.53949,-369.85716l135.53772,0.76575l-0.76575,-86.52973c-563.34706,-2.72886 -491.84227,-13.77306 -566.65486,165.40196z"/>
+  <ellipse rx="47.5" id="svg_9" cy="293.5" cx="295.00001" opacity="NaN" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="null" fill="black"/>
+ </g>
+</svg>
