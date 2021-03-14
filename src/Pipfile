@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+name = "pypi"
+verify_ssl = true
+
+[scripts]
+render = "manimgl pi.py DefaultScene -i"
+
+[packages]
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

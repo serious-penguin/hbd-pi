@@ -1,0 +1,28 @@
+on:
+  pull_request:
+  push:
+    branches: master
+
+name: Continuous Integration
+
+jobs:
+
+  all:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master # Checking out the repo
+
+    - name: run checks
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: check
+
+    - name: Install dependencies
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: install -d # Install all dependencies, including development ones
+
+    - name: Run program
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: run render # Run custom `test` command defined in the `[scripts]` block of Pipfile

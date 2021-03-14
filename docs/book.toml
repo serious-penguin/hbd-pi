@@ -1,0 +1,11 @@
+[book]
+authors = ["Seb Blanchet"]
+language = "en"
+multilingual = false
+src = "src"
+title = "hdb-pi"
+
+[output.html]
+mathjax-support = true
+site-url = "/hbd-pi/"
+git-repository-url = "https://github.com/sebastienblanchet/hbd-pi"
